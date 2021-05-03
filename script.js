@@ -47,7 +47,8 @@ function countDown() {
     if(currentTime === 0) {
         console.log(timerId);
         clearInterval(timerId);
-        alert(`GAME OVER! YOUR FINAL SCORE IS ${result}`);
+        alert(`Final Score is ${result}`);
+        location.reload();
     }
 }
 
@@ -55,8 +56,9 @@ function countDown() {
 start.addEventListener("click", handleClick);
 
 function handleClick(event) {
-    timer = setInterval(randomSquare, 1000);
-    timerId = setInterval(countDown, 1000);
+    timer = setInterval(randomSquare, 800);
+        timerId = setInterval(countDown, 1000);
+   
 }
 
 reset.addEventListener("click", () => {
